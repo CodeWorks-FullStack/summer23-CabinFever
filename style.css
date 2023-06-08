@@ -1,0 +1,96 @@
+/* NOTE this will set up one variable that will be accessible by other classes, changing the variable here will change in all the other places using this variable */
+:root {
+  --snow: #F8F7F2;
+  --sky: #9DBCBB;
+  --kitchenTile: #33A18E;
+  --slate: #4F4F51;
+  --log: #723E11;
+}
+
+
+header {
+  font-family: 'IM Fell Great Primer SC', serif;
+  background-color: var(--snow);
+}
+
+footer {
+  background-color: var(--log);
+  color: var(--snow);
+}
+
+.nav-color {
+  background-color: var(--sky);
+}
+
+.contact-border {
+  /* border: 3px solid black; */
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+.address-border {
+  border-top: none;
+  border-bottom: none;
+}
+
+
+.hero-img {
+  background-image: url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80');
+  /* NOTE min-height will allow any text or element that could potentially grow outside of this row to now fit to the row because AT MINIMUM the row must be this height */
+  min-height: 50vh;
+  background-size: cover;
+  background-position: 10% 37%;
+  background-repeat: no-repeat;
+}
+
+.glass-box {
+  /* From https://css.glass */
+  background: rgba(138, 114, 114, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 3px solid rgb(0, 0, 0);
+  color: white;
+}
+
+.item-bg {
+  background-color: var(--kitchenTile);
+}
+
+.buy-button {
+  position: absolute;
+  top: 85%;
+  right: 43%;
+}
+
+/* MEDIA RULES */
+@media (max-width: 768px) {
+
+  /* NOTE Any rules we add in the media rule, will occur when the screen is below this size */
+  .contact-border {
+    border-left: none;
+    border-right: none;
+    /* border-top: 3px solid black;
+    border-bottom: 3px solid black; */
+  }
+
+  .address-border {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+  }
+
+  .hero-img {
+    background-image: url('https://images.unsplash.com/photo-1621543597540-e9be3740352b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80');
+    /* height: 50vh; */
+    /* background-size: cover; */
+    /* background-position: 10% 37%; */
+    /* background-repeat: no-repeat; */
+  }
+
+  .buy-button {
+    /* position: absolute; */
+    top: 89%;
+    right: 43%;
+  }
+}
